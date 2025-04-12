@@ -1,3 +1,4 @@
+# Ignore config and logs
 */config/development
 */logs/log-*.php
 !*/logs/index.html
@@ -6,13 +7,43 @@
 !*/cache/index.html
 !*/cache/.htaccess
 
+# MacOS
+.DS_Store
+
+# CodeIgniter Cache & Logs
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+!application/*/.htaccess
+
+# Composer & SQLite
+composer.lock
+tests/mocks/database/ci_test.sqlite
+
+# Documentation build
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
+# Vendor
 /vendor/
+
+# IDE Files
+/nbproject/
+.idea/*
+
+# Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Test files
+/tests/tests/
+/tests/results/
